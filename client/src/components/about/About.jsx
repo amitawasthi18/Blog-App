@@ -27,7 +27,7 @@ const About = () => {
         <Box>
             <Banner/>
             <Wrapper>
-                <Typography variant="h3">Code for Interview</Typography>
+                <Typography variant="h3">Amit Awasthi</Typography>
                 <Text variant="h5">I'm a Web Developer. 
                     I've built websites, desktop applications .<br />
                     If you are interested, you can view some of my  projects here
