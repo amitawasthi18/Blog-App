@@ -16,10 +16,22 @@ const Posts = () => {
     const [posts,setPosts] = useState([]);
 
     const [searchParams] = useSearchParams();
-    const category = searchParams.get('category');
+    const category = searchParams.get('category'); 
+    let a=1;
+    useEffect(()=>{
+      const fetchData = async() =>{
+         let response= await API.getAllPosts({category:category || ''});
+         if(response.isSuccess){
+             setPosts(response.data);
+         }
+      }
+      fetchData();
 
+      return ()=>{
 
-
+      }
+ 
+     },[category,a])
 
 
     useEffect(()=>{
@@ -49,4 +61,4 @@ const Posts = () => {
   )
 }
 
-export default Posts;
+export default Posts;    
